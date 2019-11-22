@@ -7,10 +7,10 @@ import { AffiliatesComponent } from './affiliates/affiliates.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: SidebarComponent,
- },
+//   {
+//     path: '',
+//     component: SidebarComponent,
+//  },
   {
     path: 'home',
     component: HomeComponent,

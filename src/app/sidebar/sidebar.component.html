@@ -1,6 +1,13 @@
-<ul>
-  <li [routerLink]="['/HomeComponent']" >Home</li>
-  <li [routerLink]="['/affiliates']">Affiliates</li>
-  <li [routerLink]="['/statistics']">Statistics</li>
-  <li [routerLink]="['/reports']">Reports</li>
-</ul>
+<div class="sidebar-left">
+  <div class="logo m-auto">
+    <img src="./assets/images/eTrader-logo.png" alt="">
+  </div>
+  <div class="side-nav">
+    <ul class="poppinsMedium">
+      <li [routerLink]="['/home']"><i class="fa fa-television" aria-hidden="true"></i>Dashboard</li>
+      <li [routerLink]="['/affiliates']"><i class="fa fa-user-o" aria-hidden="true"></i>Affiliates</li>
+      <li [routerLink]="['/statistics']"><i class="fa fa-pie-chart" aria-hidden="true"></i>Statistics</li>
+      <li [routerLink]="['/reports']"><i class="fa fa-bar-chart" aria-hidden="true"></i>Reports</li>
+    </ul>
+  </div>
+</div>

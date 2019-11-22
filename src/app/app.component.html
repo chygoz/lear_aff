@@ -1,2 +1,13 @@
+<div class="app-admin-wrap layout-sidebar-large">
 
-<router-outlet></router-outlet>
+  <div>
+      <app-sidebar></app-sidebar>
+  </div>
+  <div class="main-content-wrap d-flex flex-column">
+      <div>
+          <app-header-sidebar></app-header-sidebar>
+      </div>
+      <router-outlet></router-outlet>
+  </div>
+</div>
+<!-- <app-search *ngIf="searchService.searchOpen"></app-search> -->
