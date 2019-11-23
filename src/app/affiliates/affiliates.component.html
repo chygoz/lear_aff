@@ -44,8 +44,8 @@
             <div class="col-md-2 textCenter">Amount</div>
           </div>
         </div>
-        <div class="reportsLists poppinsLight" *ngIf="affiliateUsers.length">
-          <div class="row reportItem" *ngFor="let user of affiliateUsers">
+        <div class="reportsLists poppinsLight" *ngIf="affiliateUsers?.length">
+          <div class="row reportItem" *ngFor="let user of affiliateUsers | paginate: { itemsPerPage: pageSize, currentPage: page };">
             <div class="col-md-2 name">{{user.affiliateId}}</div>
             <div class="col-md-3">
               <div>{{user.userName}}</div>
@@ -62,6 +62,11 @@
             <div class="col-md-2 textCenter">{{user.amount}}</div>
           </div>
         </div>
+
+    </div>
+    <div class="col-md-12 paginationControls" *ngIf="affiliateUsers?.length">
+        <pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>
     </div>
   </div>
+
 

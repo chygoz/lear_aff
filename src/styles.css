@@ -229,3 +229,23 @@ body { margin: 0px; padding: 0;}
 
 .absoluteImg { margin-left: -5px;}
 
+.paginationControls {text-align: right; margin: 30px 0px;}
+
+.paginationControls ul li, .paginationControls ul li.pagination-previous, .paginationControls ul li.pagination-next {margin: 0px 5px;  border-radius: 100%;  font-size: 16px; text-align: center; width: 40px; height: 40px; line-height: 30px;}
+
+.paginationControls ul li.current { background: #00294c;}
+
+.paginationControls ul li.pagination-previous, .paginationControls ul li.pagination-next { background: none;}
+
+.paginationControls ul li { width: 40px; height: 40px; border: 1px solid #00294c; border-radius: 100%; }
+
+.paginationControls ul li:hover a{ border-radius: 100%;}
+
+.ngx-pagination a:hover, .ngx-pagination button:hover{background: none !important; }
+
+.paginationControls .ngx-pagination .pagination-previous a, .paginationControls .ngx-pagination .pagination-next a,
+.paginationControls .pagination-previous.disabled, .paginationControls .pagination-next.disabled { padding: 0; width: 40px; height: 40px;}
+
+.paginationControls .ngx-pagination .pagination-previous a::before, .paginationControls .ngx-pagination .pagination-previous.disabled::before,
+.paginationControls .ngx-pagination .pagination-next a::after, .paginationControls .ngx-pagination .pagination-next.disabled::after { margin: 0; font-size: 26px;}
+
