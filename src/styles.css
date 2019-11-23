@@ -131,12 +131,12 @@ body { margin: 0px; padding: 0;}
 
 .main-content-wrap { width: calc(100% - 250px); float: right; }
 
-.paddingXtraLarge {  padding:0 8rem 3rem 8rem;}
+.paddingXtraLarge {  padding:0 4rem 3rem 4rem;}
 
 .header-top { background: rgb(205,47,98);
-  background: linear-gradient(90deg, rgba(205,47,98,1) 0%, rgba(255,173,20,1) 100%); padding:4rem 8rem 9rem 8rem; }
+  background: linear-gradient(90deg, rgba(205,47,98,1) 0%, rgba(255,173,20,1) 100%); padding:4rem 4rem 9rem 4rem; }
 
-.header-top .card { border-radius: 10px; background: #f8f9ff; margin: 0px 15px; box-shadow: 0px 10px 10px -10px #333;}
+.header-top .card { border-radius: 10px; background: #f8f9ff; margin: 0px; box-shadow: 0px 10px 10px -10px #333;}
 
 .card-body  p { color: #939393;}
 
@@ -184,7 +184,7 @@ body { margin: 0px; padding: 0;}
 
 .reportItem { border-bottom: 1px solid #18345f; margin:0}
 
-.reportItem div,.reportsHeading div { padding: 0;}
+.reportItem div,.reportsHeading div { padding: 0; font-size: 15pz;}
 
 .reportsContentWrapper { margin-top: -7rem;}
 
@@ -210,7 +210,7 @@ body { margin: 0px; padding: 0;}
 
 /* .contentWrapper .searchItem .affiliateTopRight input, .contentWrapper .searchItem .affiliateTopRight .input-group { cursor: pointer; width: 175px;} */
 
-.affiliateTopRight { position: absolute; right: 0;}
+.affiliateTopRight { position: absolute; right: 20px;}
 
 .affiliateTopRight input { cursor: pointer;}
 
