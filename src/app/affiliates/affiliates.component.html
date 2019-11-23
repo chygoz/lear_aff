@@ -1,30 +1,67 @@
 <div class="contentWrapper  reportsContentWrapper affiliateContentWrapper paddingXtraLarge">
-    <div class="searchItem">
+  <div class="searchItem">
+    <div class="row">
       <div class="col-md-4">
         <div class="form-group searchGroup">
             <input class="form-control searchInput" placeholder="Search" />
             <span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span>
         </div>
       </div>
+
+      <div class="col-lg-7 affiliateTopRight">
+        <div class="row">
+            <div class="form-group col-lg-6 calender">
+              <span class="text">From</span>
+              <div class="input-group">
+                <input id="picker1" class="form-control" placeholder="yyyy-mm-dd" name="dp"
+                    ngbDatepicker #dp1="ngbDatepicker" (click)="dp1.toggle()">
+                <span class="searchIcon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+            </div>
+          </div>
+          <div class="form-group col-lg-6 calender">
+              <span class="text">&nbsp;&nbsp;&nbsp;To</span>
+            <div class="input-group">
+
+              <input id="picker1" class="form-control" placeholder="yyyy-mm-dd" name="dp"
+                  ngbDatepicker #dp2="ngbDatepicker" (click)="dp2.toggle()">
+              <span class="searchIcon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+          </div>
+        </div>
+
+      </div>
+      </div>
     </div>
+  </div>
 
     <div class="reportsWrapper">
         <h2 class="poppinsSemiBold font20">Affiliate Report</h2>
         <div class="reportsHeading poppinsMedium">
           <div class="row">
-            <div class="col-md-4">Name</div>
+            <div class="col-md-2">Affiliate ID</div>
+            <div class="col-md-3">Acct Detials</div>
             <div class="col-md-3 textCenter">Referrals</div>
-            <div class="col-md-3 textCenter">Point</div>
+            <div class="col-md-2 textCenter">Point</div>
             <div class="col-md-2 textCenter">Amount</div>
           </div>
         </div>
         <div class="reportsLists poppinsLight" *ngIf="affiliateUsers.length">
           <div class="row reportItem" *ngFor="let user of affiliateUsers">
-            <div class="col-md-4 name">{{user.name}}</div>
-            <div class="col-md-3 textCenter">{{user.referalCount}}</div>
-            <div class="col-md-3 textCenter">{{user.points}}</div>
+            <div class="col-md-2 name">{{user.affiliateId}}</div>
+            <div class="col-md-3">
+              <div>{{user.userName}}</div>
+              <div><span>{{user.bankName}}&nbsp;&nbsp;{{user.accountNumber}}</span></div>
+            </div>
+            <div class="col-md-3 textCenter ">{{user.referalCount}}
+              <span class="referalUserIcons">
+                <span class="img1"><img src="./assets/images/default-profile-icon.png"></span>
+                <span class="absoluteImg"><img src="./assets/images/default-profile-icon.png"></span>
+                <span class="absoluteImg"><img src="./assets/images/default-profile-icon.png"></span>
+              </span>
+            </div>
+            <div class="col-md-2 textCenter">{{user.points}}</div>
             <div class="col-md-2 textCenter">{{user.amount}}</div>
           </div>
         </div>
     </div>
   </div>
+

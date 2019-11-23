@@ -168,7 +168,7 @@ body { margin: 0px; padding: 0;}
 
 .contentWrapper .searchItem { float: right; position: relative;}
 
-.contentWrapper .searchItem input { width: 100%; background: none; border-radius: 100px; color: #fff; border: 2px solid #fff; padding-left: 40px; height: 45px;}
+.contentWrapper .searchItem input { width: 250px; background: none; border-radius: 100px !important; color: #fff; border: 2px solid #fff; padding-left: 40px !important; height: 45px;}
 
 .contentWrapper .searchItem .searchIcon { position: absolute; top: 8px; left: 30px;}
 
@@ -188,7 +188,7 @@ body { margin: 0px; padding: 0;}
 
 .reportsContentWrapper { margin-top: -7rem;}
 
-.affiliateContentWrapper .searchItem { float: left; width: 100%;}
+.affiliateContentWrapper .searchItem { display: flex; width: 100%;}
 
 .affiliateContentWrapper .reportsWrapper { background: #fff; color: #333; box-shadow: 0px 0px 5px rgba(0,0,0,0.2);}
 
@@ -197,3 +197,35 @@ body { margin: 0px; padding: 0;}
 .affiliateContentWrapper h2{ color: #000;}
 
 .affiliateContentWrapper .reportItem{ border-color:rgba(0,0,0,0.06) }
+
+.affiliateTopRight .calender .input-group-append button.btn.btn-secondary { position: absolute; top: 0px; left: 0; height: 100%; background-color: rgba(255,255,255,0); border-color: rgba(255,255,255,0);}
+
+.affiliateTopRight .calender .input-group-append button.btn.btn-secondary i { color: #fff;}
+
+.affiliateTopRight .calender { display: flex; }
+
+.affiliateTopRight .calender span.text { color: #fff; vertical-align: middle; padding-right: 10px; line-height: 50px;}
+
+.affiliateTopRight .calender .searchIcon { left: 15px;}
+
+/* .contentWrapper .searchItem .affiliateTopRight input, .contentWrapper .searchItem .affiliateTopRight .input-group { cursor: pointer; width: 175px;} */
+
+.affiliateTopRight { position: absolute; right: 0;}
+
+.affiliateTopRight input { cursor: pointer;}
+
+.searchItem input::placeholder { color: #fff;}
+
+.searchItem input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+.searchItem input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+}
+.referalUserIcons { position: relative; padding-left: 5px;}
+
+.referalUserIcons img { width: 30px; position: relative;}
+
+.absoluteImg { margin-left: -5px;}
+

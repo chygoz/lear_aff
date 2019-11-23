@@ -13,37 +13,37 @@ export class ReportsComponent implements OnInit {
   ngOnInit() {
     this.reports = [
       {
-        name: 'Jonah Kenos',
+        affiliateId: 'xVhSuj',
         currentWeek: '345',
         lastWeek: '456',
         totalPoints: '965'
       },
       {
-        name: 'Dangone Bella',
+        affiliateId: 'mNdjks',
         currentWeek: '345',
         lastWeek: '456',
         totalPoints: '965'
       },
       {
-        name: 'Micheal Boltton',
+        affiliateId: 'ajdSjk',
         currentWeek: '345',
         lastWeek: '456',
         totalPoints: '965'
       },
       {
-        name: 'Jonah Kenos',
+        affiliateId: 'xVhSuj',
         currentWeek: '345',
         lastWeek: '456',
         totalPoints: '965'
       },
       {
-        name: 'Dangone Bella',
+        affiliateId: 'mNdjks',
         currentWeek: '345',
         lastWeek: '456',
         totalPoints: '965'
       },
       {
-        name: 'Micheal Boltton',
+        affiliateId: 'ajdSjk',
         currentWeek: '345',
         lastWeek: '456',
         totalPoints: '965'

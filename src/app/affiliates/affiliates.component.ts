@@ -12,37 +12,55 @@ export class AffiliatesComponent implements OnInit {
   ngOnInit() {
     this.affiliateUsers = [
       {
-        name: 'Jonah Kenos',
+        affiliateId: 'ajdSjk',
+        userName: 'Jonah Kenos',
+        bankName: 'Access Bank',
+        accountNumber: '0239487423',
         referalCount: '345',
         points: '456',
         amount: '965'
       },
       {
-        name: 'Dangone Bella',
+        affiliateId: 'ajdSjk',
+        userName: 'Jonah Kenos',
+        bankName: 'Access Bank',
+        accountNumber: '0239487423',
         referalCount: '345',
         points: '456',
         amount: '965'
       },
       {
-        name: 'Micheal Boltton',
+        affiliateId: 'ajdSjkkk',
+        userName: 'Jonah Kenos',
+        bankName: 'Access Bank',
+        accountNumber: '0239487423',
         referalCount: '345',
         points: '456',
         amount: '965'
       },
       {
-        name: 'Jonah Kenos',
+        affiliateId: 'ajdSjk',
+        userName: 'Jonah Kenos',
+        bankName: 'Access Bank',
+        accountNumber: '0239487423',
         referalCount: '345',
         points: '456',
         amount: '965'
       },
       {
-        name: 'Dangone Bella',
+        affiliateId: 'ajdSjk',
+        userName: 'Jonah Kenos',
+        bankName: 'Access Bank',
+        accountNumber: '0239487423',
         referalCount: '345',
         points: '456',
         amount: '965'
       },
       {
-        name: 'Micheal Boltton',
+        affiliateId: 'ajdSjkkk',
+        userName: 'Jonah Kenos',
+        bankName: 'Access Bank',
+        accountNumber: '0239487423',
         referalCount: '345',
         points: '456',
         amount: '965'
