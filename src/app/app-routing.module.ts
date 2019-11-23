@@ -12,9 +12,13 @@ const routes: Routes = [
 //     component: SidebarComponent,
 //  },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
  },
+ {
+  path: 'home',
+  component: HomeComponent,
+},
  {
   path: 'reports',
   component: ReportsComponent,
