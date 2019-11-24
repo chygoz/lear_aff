@@ -4,13 +4,13 @@
     <div class="row">
       <div class="col-lg-6">
           <div class="affilateForm">
-              <form>
+              <form [formGroup]="payOutForm" (ngSubmit)="submit()" class="customForm">
                 <div class="row">
                   <div class="form-group col-lg-6">
-                    <input id="" class="form-control form-control-square bgWhite font15 poppinsLight" formControlName="" type="text" placeholder="Referral Code">
+                    <input id="refCode" class="form-control form-control-square bgWhite font15 poppinsLight" formControlName="refCode" type="text" placeholder="Referral Code">
                   </div>
                   <div class="form-group col-lg-6">
-                      <input id="" class="form-control form-control-square bgWhite font15 poppinsLight" formControlName="" type="text" placeholder="Points">
+                      <input id="points" class="form-control form-control-square bgWhite font15 poppinsLight" formControlName="points" type="text" placeholder="Points">
                     </div>
                     <div class="form-group col-lg-6 calender">
                         <div class="input-group">
@@ -35,10 +35,10 @@
                       </div>
                   </div>
                   <div class="form-group col-lg-12">
-                      <input id="" class="form-control form-control-square bgWhite font15 poppinsLight" formControlName="" type="text" placeholder="₦ 1234">
+                      <input id="amount" class="form-control form-control-square bgWhite font15 poppinsLight" formControlName="amount" type="text" placeholder="₦ 1234">
                   </div>
                   <div class="col-lg-12">
-                      <button type="submit"  class="btn text-center font14 loginBtn poppinsMedium submitButton">Pay out</button>
+                      <button type="submit"  class="btn text-center font14 loginBtn poppinsMedium submitButton" [disabled]="!payOutForm.valid">Pay out</button>
                   </div>
 
                 </div>
