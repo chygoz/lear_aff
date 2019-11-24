@@ -12,6 +12,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { AffiliatesComponent } from './affiliates/affiliates.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderSidebarComponent } from './header-sidebar/header-sidebar.component';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HeaderSidebarComponent } from './header-sidebar/header-sidebar.componen
     NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
+    FilterPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

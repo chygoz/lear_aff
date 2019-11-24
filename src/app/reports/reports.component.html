@@ -2,7 +2,7 @@
   <div class="searchItem">
     <div class="col-md-12" style="padding: 0;">
       <div class="form-group searchGroup">
-          <input class="form-control searchInput" placeholder="Search" />
+          <input class="form-control searchInput" [(ngModel)]="filterReports.affiliateId" placeholder="Search" />
           <span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span>
       </div>
     </div>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="reportsLists poppinsLight" *ngIf="reports.length">
-        <div class="row reportItem" *ngFor="let report of reports | paginate: { itemsPerPage: pageSize, currentPage: page };">
+        <div class="row reportItem" *ngFor="let report of reports | filterBy: filterReports | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index">
           <div class="col-md-3 name">{{report.affiliateId}}</div>
           <div class="col-md-3 textCenter">{{report.currentWeek}}</div>
           <div class="col-md-3 textCenter">{{report.lastWeek}}</div>

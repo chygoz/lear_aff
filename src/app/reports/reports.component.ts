@@ -9,6 +9,9 @@ export class ReportsComponent implements OnInit {
   reports:any = [];
   page = 1;
   pageSize = 10;
+  filterReports:any = {
+    affiliateId: ''
+  }
 
   constructor() { }
 
@@ -55,5 +58,7 @@ export class ReportsComponent implements OnInit {
 
     ]
   }
+
+
 
 }

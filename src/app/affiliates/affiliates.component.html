@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="form-group searchGroup">
-            <input class="form-control searchInput" placeholder="Search" />
+            <input class="form-control searchInput" placeholder="Search" [(ngModel)]="affiliateUser.affiliateId" />
             <span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span>
         </div>
       </div>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="reportsLists poppinsLight" *ngIf="affiliateUsers?.length">
-          <div class="row reportItem" *ngFor="let user of affiliateUsers | paginate: { itemsPerPage: pageSize, currentPage: page };">
+          <div class="row reportItem" *ngFor="let user of affiliateUsers  | filterBy: affiliateUser | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index">
             <div class="col-md-2 name">{{user.affiliateId}}</div>
             <div class="col-md-3">
               <div>{{user.userName}}</div>

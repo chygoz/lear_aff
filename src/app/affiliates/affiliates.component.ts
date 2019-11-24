@@ -9,11 +9,12 @@ export class AffiliatesComponent implements OnInit {
   affiliateUsers:any = [];
   page = 1;
   pageSize = 10;
+  affiliateUser: any = { affiliateId: ''}
   constructor() { }
 
   ngOnInit() {
     this.affiliateUsers = [{
-      affiliateId: 'ajdSjk',
+      affiliateId: 'abcd',
       userName: 'Jonah Kenos',
       bankName: 'Access Bank',
       accountNumber: '0239487423',
@@ -112,7 +113,7 @@ export class AffiliatesComponent implements OnInit {
         amount: '965'
       },
       {
-        affiliateId: 'ajdSjkkk',
+        affiliateId: 'abcd',
         userName: 'Jonah Kenos',
         bankName: 'Access Bank',
         accountNumber: '0239487423',
