@@ -18,4 +18,9 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  payOutSubmit() {
+    console.log(this.payOutForm);
+    console.log(this.payOutForm.get('refCode'))
+  }
+
 }

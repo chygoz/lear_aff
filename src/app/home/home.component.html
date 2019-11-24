@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-6">
           <div class="affilateForm">
-              <form [formGroup]="payOutForm" (ngSubmit)="submit()" class="customForm">
+              <form [formGroup]="payOutForm" (ngSubmit)="payOutSubmit()">
                 <div class="row">
                   <div class="form-group col-lg-6">
                     <input id="refCode" class="form-control form-control-square bgWhite font15 poppinsLight" formControlName="refCode" type="text" placeholder="Referral Code">
