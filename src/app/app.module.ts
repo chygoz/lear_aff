@@ -13,7 +13,8 @@ import { AffiliatesComponent } from './affiliates/affiliates.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderSidebarComponent } from './header-sidebar/header-sidebar.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './services/interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
     NgbModule,
@@ -34,7 +36,13 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
     ReactiveFormsModule,
     FilterPipeModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,8 +13,8 @@
             <div class="form-group col-lg-6 calender">
               <span class="text">From</span>
               <div class="input-group">
-                <input id="picker1" class="form-control" placeholder="yyyy-mm-dd" name="dp"
-                    ngbDatepicker #dp1="ngbDatepicker" (click)="dp1.toggle()">
+                <input id="picker1" class="form-control" [(ngModel)]="from" placeholder="yyyy-mm-dd" name="dp"
+                    ngbDatepicker #dp1="ngbDatepicker" (click)="dp1.toggle();" (dateSelect)="getAffData()">
                 <span class="searchIcon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
             </div>
           </div>
@@ -22,8 +22,8 @@
               <span class="text">&nbsp;&nbsp;&nbsp;To</span>
             <div class="input-group">
 
-              <input id="picker1" class="form-control" placeholder="yyyy-mm-dd" name="dp"
-                  ngbDatepicker #dp2="ngbDatepicker" (click)="dp2.toggle()">
+              <input id="picker1" class="form-control" [(ngModel)]="to" placeholder="yyyy-mm-dd" name="dp"
+                  ngbDatepicker #dp2="ngbDatepicker" (click)="dp2.toggle();" (dateSelect)="getAffData()">
               <span class="searchIcon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
           </div>
         </div>
@@ -45,21 +45,21 @@
           </div>
         </div>
         <div class="reportsLists poppinsLight" *ngIf="affiliateUsers?.length">
-          <div class="row reportItem" *ngFor="let user of affiliateUsers  | filterBy: affiliateUser | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index">
-            <div class="col-md-2 name">{{user.affiliateId}}</div>
+          <div class="row reportItem" *ngFor="let user of affiliateUsers | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index">
+            <div class="col-md-2 name">{{user?.user.referralCode}}</div>
             <div class="col-md-3">
-              <div>{{user.userName}}</div>
-              <div><span>{{user.bankName}}&nbsp;&nbsp;{{user.accountNumber}}</span></div>
+              <div>{{user?.bank_account_details[0]?.accountHolderName}}</div>
+              <div><span>{{user?.bank_account_details[0]?.bank}}&nbsp;&nbsp;{{user?.bank_account_details[0]?.accountNumber}}</span></div>
             </div>
-            <div class="col-md-3 textCenter ">{{user.referalCount}}
+            <div class="col-md-3 textCenter ">{{user?.referral_users_count}}
               <span class="referalUserIcons">
                 <span class="img1"><img src="./assets/images/default-profile-icon.png"></span>
                 <span class="absoluteImg"><img src="./assets/images/default-profile-icon.png"></span>
                 <span class="absoluteImg"><img src="./assets/images/default-profile-icon.png"></span>
               </span>
             </div>
-            <div class="col-md-2 textCenter">{{user.points}}</div>
-            <div class="col-md-2 textCenter">{{user.amount}}</div>
+            <div class="col-md-2 textCenter">{{user?.points}}</div>
+            <div class="col-md-2 textCenter">{{user?.affiliate_transactions_amt}}</div>
           </div>
         </div>
 

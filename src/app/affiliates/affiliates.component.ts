@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-affiliates',
@@ -9,119 +10,27 @@ export class AffiliatesComponent implements OnInit {
   affiliateUsers:any = [];
   page = 1;
   pageSize = 10;
-  affiliateUser: any = { affiliateId: ''}
-  constructor() { }
+  affiliateUser: any = { affiliateId: ''};
+  from: any;
+  to: any;
+  constructor(private userservice: UserService) { }
 
   ngOnInit() {
-    this.affiliateUsers = [{
-      affiliateId: 'abcd',
-      userName: 'Jonah Kenos',
-      bankName: 'Access Bank',
-      accountNumber: '0239487423',
-      referalCount: '345',
-      points: '456',
-      amount: '965'
-    },
-    {
-      affiliateId: 'ajdSjk',
-      userName: 'Jonah Kenos',
-      bankName: 'Access Bank',
-      accountNumber: '0239487423',
-      referalCount: '345',
-      points: '456',
-      amount: '965'
-    },
-    {
-      affiliateId: 'ajdSjkkk',
-      userName: 'Jonah Kenos',
-      bankName: 'Access Bank',
-      accountNumber: '0239487423',
-      referalCount: '345',
-      points: '456',
-      amount: '965'
-    },
-    {
-      affiliateId: 'ajdSjk',
-      userName: 'Jonah Kenos',
-      bankName: 'Access Bank',
-      accountNumber: '0239487423',
-      referalCount: '345',
-      points: '456',
-      amount: '965'
-    },
-    {
-      affiliateId: 'ajdSjk',
-      userName: 'Jonah Kenos',
-      bankName: 'Access Bank',
-      accountNumber: '0239487423',
-      referalCount: '345',
-      points: '456',
-      amount: '965'
-    },
-    {
-      affiliateId: 'ajdSjkkk',
-      userName: 'Jonah Kenos',
-      bankName: 'Access Bank',
-      accountNumber: '0239487423',
-      referalCount: '345',
-      points: '456',
-      amount: '965'
-    },
-      {
-        affiliateId: 'ajdSjk',
-        userName: 'Jonah Kenos',
-        bankName: 'Access Bank',
-        accountNumber: '0239487423',
-        referalCount: '345',
-        points: '456',
-        amount: '965'
-      },
-      {
-        affiliateId: 'ajdSjk',
-        userName: 'Jonah Kenos',
-        bankName: 'Access Bank',
-        accountNumber: '0239487423',
-        referalCount: '345',
-        points: '456',
-        amount: '965'
-      },
-      {
-        affiliateId: 'ajdSjkkk',
-        userName: 'Jonah Kenos',
-        bankName: 'Access Bank',
-        accountNumber: '0239487423',
-        referalCount: '345',
-        points: '456',
-        amount: '965'
-      },
-      {
-        affiliateId: 'ajdSjk',
-        userName: 'Jonah Kenos',
-        bankName: 'Access Bank',
-        accountNumber: '0239487423',
-        referalCount: '345',
-        points: '456',
-        amount: '965'
-      },
-      {
-        affiliateId: 'ajdSjk',
-        userName: 'Jonah Kenos',
-        bankName: 'Access Bank',
-        accountNumber: '0239487423',
-        referalCount: '345',
-        points: '456',
-        amount: '965'
-      },
-      {
-        affiliateId: 'abcd',
-        userName: 'Jonah Kenos',
-        bankName: 'Access Bank',
-        accountNumber: '0239487423',
-        referalCount: '345',
-        points: '456',
-        amount: '965'
-      }
-    ]
+    
+  }
+
+  getAffData(){
+    if(this.from && this.to){
+      let fromDate = this.from.year+'-'+(this.from.month<10?'0'+this.from.month:this.from.month)+'-'+(this.from.day<10?'0'+this.from.day:this.from.day);
+      let toDate = this.to.year+'-'+(this.to.month<10?'0'+this.to.month:this.to.month)+'-'+(this.to.day<10?'0'+this.to.day:this.to.day);
+      let params = {
+          from: fromDate,
+          to: toDate
+        }
+        this.userservice.getThisMonthsReferralPoints(params).subscribe((res:any) => {
+          this.affiliateUsers = res.data;
+        })
+    }
   }
 
 }
