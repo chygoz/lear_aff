@@ -12,18 +12,20 @@
       <h2 class="poppinsSemiBold font20">Affiliate Report</h2>
       <div class="reportsHeading poppinsMedium">
         <div class="row">
-          <div class="col-md-3">Affiliate ID</div>
+          <div class="col-md-3">Name</div>
+          <div class="col-md-1">Affiliate ID</div>
           <div class="col-md-3 textCenter">Current Week Point</div>
           <div class="col-md-3 textCenter">Last Week Point</div>
-          <div class="col-md-3 textCenter">Total Point</div>
+          <div class="col-md-2 textCenter">Total Point</div>
         </div>
       </div>
       <div class="reportsLists poppinsLight" *ngIf="reports?.length">
         <div class="row reportItem" *ngFor="let report of reports | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index">
-          <div class="col-md-3 name">{{report?.referralCode}}</div>
+          <div class="col-md-3 name">{{report?.first_name}} {{report?.last_name}}</div>
+          <div class="col-md-1 name">{{report?.referralCode}}</div>
           <div class="col-md-3 textCenter">{{report?.this_week_points}}</div>
           <div class="col-md-3 textCenter">{{report?.past_week_points}}</div>
-          <div class="col-md-3 textCenter">{{report?.total}}</div>
+          <div class="col-md-2 textCenter">{{report?.total}}</div>
         </div>
       </div>
   </div>

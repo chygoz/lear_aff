@@ -37,21 +37,23 @@
         <h2 class="poppinsSemiBold font20">Affiliate Report</h2>
         <div class="reportsHeading poppinsMedium">
           <div class="row">
+            <div class="col-md-2">Name</div>
             <div class="col-md-2">Affiliate ID</div>
             <div class="col-md-3">Acct Detials</div>
-            <div class="col-md-3 textCenter">Referrals</div>
+            <div class="col-md-2 textCenter">Referrals</div>
             <div class="col-md-2 textCenter">Point</div>
-            <div class="col-md-2 textCenter">Amount</div>
+            <div class="col-md-1 textCenter">Amount</div>
           </div>
         </div>
         <div class="reportsLists poppinsLight" *ngIf="affiliateUsers?.length">
           <div class="row reportItem" *ngFor="let user of affiliateUsers | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index">
+            <div class="col-md-2 name">{{user?.user.first_name}} {{user?.user.last_name}}</div>
             <div class="col-md-2 name">{{user?.user.referralCode}}</div>
             <div class="col-md-3">
               <div>{{user?.bank_account_details[0]?.accountHolderName}}</div>
               <div><span>{{user?.bank_account_details[0]?.bank}}&nbsp;&nbsp;{{user?.bank_account_details[0]?.accountNumber}}</span></div>
             </div>
-            <div class="col-md-3 textCenter ">{{user?.referral_users_count}}
+            <div class="col-md-2 textCenter ">{{user?.referral_users_count}}
               <span class="referalUserIcons">
                 <span class="img1"><img src="./assets/images/default-profile-icon.png"></span>
                 <span class="absoluteImg"><img src="./assets/images/default-profile-icon.png"></span>
@@ -59,7 +61,7 @@
               </span>
             </div>
             <div class="col-md-2 textCenter">{{user?.points}}</div>
-            <div class="col-md-2 textCenter">{{user?.affiliate_transactions_amt}}</div>
+            <div class="col-md-1 textCenter">{{user?.affiliate_transactions_amt}}</div>
           </div>
         </div>
 
