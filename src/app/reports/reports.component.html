@@ -16,6 +16,8 @@
           <div class="col-md-1">Affiliate ID</div>
           <div class="col-md-3 textCenter">Current Week Point</div>
           <div class="col-md-3 textCenter">Last Week Point</div>
+          <div class="col-md-3 textCenter">Last Week TVB</div>
+          <div class="col-md-3 textCenter">Last Week APB</div>
           <div class="col-md-2 textCenter">Total Point</div>
         </div>
       </div>
@@ -25,6 +27,12 @@
           <div class="col-md-1 name">{{report?.referralCode}}</div>
           <div class="col-md-3 textCenter">{{report?.this_week_points}}</div>
           <div class="col-md-3 textCenter">{{report?.past_week_points}}</div>
+          <div class="col-md-3 textCenter"
+          *ngIf="report?.affiliate_metrics && report.affiliate_metrics.length > 0"
+          >{{report.affiliate_metrics[0].tvb}}</div>
+          <div class="col-md-3 textCenter"
+          *ngIf="report?.affiliate_metrics && report.affiliate_metrics.length > 0"
+          >{{report.affiliate_metrics[0].apb}}</div>
           <div class="col-md-2 textCenter">{{report?.total}}</div>
         </div>
       </div>
