@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.payOutForm = this.fb.group({
-      refCode: ['', Validators.required],
+      referralCode: ['', Validators.required],
       points: ['', Validators.required],
       amount: ['', Validators.required],
       paymentFrom: ['', Validators.required],
